@@ -13,6 +13,8 @@ export const ProductList = () => {
 
 
   return (
+      <>
+      <h2>Products</h2>
     <section className="products">
       {console.log("ProductList: Render", products)}
       {
@@ -33,5 +35,6 @@ export const ProductList = () => {
         })
       }
     </section>
+    </>
   )
 }

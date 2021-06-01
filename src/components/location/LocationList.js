@@ -13,6 +13,8 @@ export const LocationList = () => {
 
 
   return (
+      <>
+      <h2>Locations</h2>
     <section className="locations">
       {console.log("LocationList: Render", locations)}
       {
@@ -30,5 +32,6 @@ export const LocationList = () => {
         })
       }
     </section>
+    </>
   )
 }
