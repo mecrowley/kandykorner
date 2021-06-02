@@ -27,6 +27,9 @@ export const LocationList = () => {
               <div className="location__size">
                 Size: { location.squareFootage }
               </div>
+              <div className="location__hcAccess">
+                Handicap Accessible: { location.handicapAccessible ? "Yes" : "No" }
+              </div>
             </div>
           )
         })
