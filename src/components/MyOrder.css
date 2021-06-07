@@ -1,7 +1,7 @@
 .myOrder {
     display: flex;
     flex-direction: column;
-    border: solid black 0.2em;
+    border: solid goldenrod 0.2em;
     width: 60%;
     margin: auto;
 }
@@ -14,7 +14,7 @@
 .customerCandy {
     display: flex;
     flex-direction: row;
-    border-top: solid black 
+    border-top: solid goldenrod 0.2em; 
 }
 
 .detail {
