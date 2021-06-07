@@ -1,0 +1,23 @@
+.myOrder {
+    display: flex;
+    flex-direction: column;
+    border: solid black 0.2em;
+    width: 60%;
+    margin: auto;
+}
+
+.order__header {
+    display: flex;
+    flex-direction: row;
+}
+
+.customerCandy {
+    display: flex;
+    flex-direction: row;
+    border-top: solid black 
+}
+
+.detail {
+    flex-basis: 33%;
+    padding: 1em 0.5em;
+}

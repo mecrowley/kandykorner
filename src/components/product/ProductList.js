@@ -1,10 +1,12 @@
 import React, { useContext, useEffect } from "react"
 import { ProductContext } from "./ProductProvider"
+import { CustomerCandyContext } from "../customerCandy/CustomerCandyProvider";
 import "./Product.css"
 
 export const ProductList = () => {
   
   const { products, getProducts } = useContext(ProductContext)
+  const { addCustomerCandy } = useContext(CustomerCandyContext)
 
   useEffect(() => {
     console.log("ProductList: useEffect - getProducts")
@@ -30,6 +32,12 @@ export const ProductList = () => {
               <div className="product__price">
                 Price: { product.price }
               </div>
+              <button onClick={event => {
+                addCustomerCandy({
+                  customerId: parseInt(localStorage.getItem("kandy_customer")),
+                  productId: product.id
+                })
+              }}>Add to order</button>
             </div>
           )
         })
