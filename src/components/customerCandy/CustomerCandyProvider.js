@@ -6,7 +6,7 @@ export const CustomerCandyProvider = (props) => {
     const [customerCandys, setCustomerCandys] = useState([])
 
     const getCustomerCandys = () => {
-        return fetch("http://localhost:8088/customerCandys?_expand=product&_exapnd=customer")
+        return fetch("http://localhost:8088/customerCandys?_expand=product&_expand=customer")
         .then(res => res.json())
         .then(setCustomerCandys)
     }
