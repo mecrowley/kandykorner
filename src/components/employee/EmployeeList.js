@@ -5,7 +5,7 @@ import "./Employee.css"
 
 export const EmployeeList = () => {
 
-  const { employees, getEmployees } = useContext(EmployeeContext)
+  const { employees, getEmployees, deleteEmployee } = useContext(EmployeeContext)
 
   useEffect(() => {
     getEmployees()
@@ -16,6 +16,11 @@ export const EmployeeList = () => {
   return (
     <>
       <h2>Employees</h2>
+      <button className="newEmployee__button" onClick={
+        () => history.push("/employees/create")
+      }>
+        Add Employee
+      </button>
       <section className="employees">
         {
           employees.map(employee => {
@@ -24,6 +29,7 @@ export const EmployeeList = () => {
                 <div className="employee__name">
                   <h3>{employee.name}</h3>
                 </div>
+                <div className="employee__info">
                 <div className="employee__location">
                   Location: {employee.location.address}
                 </div>
@@ -36,16 +42,16 @@ export const EmployeeList = () => {
                 <div className="employee__hourlyRate">
                   Hourly Pay Rate: {employee.hourlyRate}
                 </div>
+                </div>
+                <button onClick={() => {
+                  deleteEmployee(employee.id)
+                  history.push("/employees")
+                }}>Fire Employee 😿</button>
               </div>
             )
           })
         }
       </section>
-      <button onClick={
-        () => history.push("/employees/create")
-      }>
-        Add Employee
-      </button>
     </>
   )
 }

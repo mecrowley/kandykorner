@@ -37,10 +37,10 @@ export const Login = props => {
             </dialog>
 
             <section>
+                <h1 className="kkRewards">Kandy Korner Rewards</h1>
+                <h2 className="signIn">Please sign in</h2>
                 <form className="form--login" onSubmit={handleLogin}>
-                    <h1>Kandy Korner Rewards</h1>
-                    <h2>Please sign in</h2>
-                    <fieldset>
+                    <fieldset className="login__fieldset">
                         <label htmlFor="inputEmail"> Email address </label>
                         <input ref={email} type="email"
                             id="email"
@@ -48,15 +48,15 @@ export const Login = props => {
                             placeholder="Email address"
                             required autoFocus />
                     </fieldset>
-                    <fieldset>
+                    <fieldset className="login__fieldset">
                         <button type="submit">
                             Sign in
                         </button>
                     </fieldset>
+                    <div className="link--register">
+                        <Link to="/register">Not a member yet?</Link>
+                    </div>
                 </form>
-            </section>
-            <section className="link--register">
-                <Link to="/register">Not a member yet?</Link>
             </section>
         </main>
     )

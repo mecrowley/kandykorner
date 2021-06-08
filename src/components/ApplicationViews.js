@@ -16,7 +16,9 @@ export const ApplicationViews = () => {
     return (
         <>
             <Route exact path="/">
+                <div className="KandyKorner">
                 <h1>Kandy Korner</h1>
+                </div>
             </Route>
 
             <LocationProvider>

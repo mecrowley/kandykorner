@@ -6,14 +6,16 @@
 /*Typography
 --------------------------------------------------------------*/
 body,
-button,
-input,
-select,
 textarea {
   color: #404040;
   font-family: "Comfortaa", Arial, sans-serif;
   font-size: 14px;
   line-height: 1.5;
+  margin: 0;
+  background-image: url(neko_candy.png);
+  background-size: 130%;
+  background-position-y: top;
+  background-position-x: right;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -37,4 +39,27 @@ strong {
 
 address {
   margin: 0 0 1.5em;
+}
+
+.KandyKorner {
+  background-color: whitesmoke;
+  border-radius: 1rem;
+  width: 85%;
+  margin: auto;
+}
+
+button {
+  color: #404040;
+  font-family: "Comfortaa", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  background-color: thistle;
+}
+
+input {
+  color: #404040;
+  font-family: "Comfortaa", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  background-color: whitesmoke;
 }

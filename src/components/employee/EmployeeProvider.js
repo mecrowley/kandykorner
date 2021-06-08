@@ -7,8 +7,8 @@ export const EmployeeProvider = (props) => {
 
     const getEmployees = () => {
         return fetch("http://localhost:8088/employees?_expand=location")
-        .then(res => res.json())
-        .then(setEmployees)
+            .then(res => res.json())
+            .then(setEmployees)
     }
 
     const addEmployee = employeeObj => {
@@ -19,12 +19,19 @@ export const EmployeeProvider = (props) => {
             },
             body: JSON.stringify(employeeObj)
         })
-        .then(getEmployees)
+            .then(getEmployees)
+    }
+
+    const deleteEmployee = employeeId => {
+        return fetch(`http://localhost:8088/employees/${employeeId}`, {
+            method: "DELETE"
+        })
+            .then(getEmployees)
     }
 
     return (
         <EmployeeContext.Provider value={{
-            employees, getEmployees, addEmployee
+            employees, getEmployees, addEmployee, deleteEmployee
         }}>
             {props.children}
         </EmployeeContext.Provider>

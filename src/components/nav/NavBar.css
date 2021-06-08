@@ -3,6 +3,8 @@
     flex-wrap: wrap;
     justify-content: left;
     justify-content: space-between;
+    padding: 1rem;
+    background-color: whitesmoke;
 }
 
 .navbar__item {
