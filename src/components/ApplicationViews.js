@@ -49,11 +49,9 @@ export const ApplicationViews = () => {
             </EmployeeProvider>
 
             <CustomerProvider>
-                <CustomerCandyProvider>
                     <Route exact path="/customers">
                         <CustomerList />
                     </Route>
-                </CustomerCandyProvider>
             </CustomerProvider>
 
             <ProductProvider>

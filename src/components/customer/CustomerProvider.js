@@ -6,7 +6,7 @@ export const CustomerProvider = (props) => {
     const [customers, setCustomers] = useState([])
 
     const getCustomers = () => {
-        return fetch("https://kandy-api-mec.herokuapp.com/customers")
+        return fetch("https://kandy-api-mec.herokuapp.com/customers?_embed=customerCandys")
         .then(res => res.json())
         .then(setCustomers)
     }
