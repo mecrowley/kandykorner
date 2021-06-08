@@ -7,7 +7,7 @@
 .product {
   flex-basis: 28%;
   margin: 1em;
-  padding: 1em;
+  padding: 0 1em 1em 1em;
   border: 0.3em solid goldenrod;
   background-color: whitesmoke;
   text-align: center;

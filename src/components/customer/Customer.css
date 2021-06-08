@@ -13,7 +13,7 @@
   .customer {
       flex-basis: 28%;
       /* margin: 1em; */
-      padding: 1em;
+      padding: 0 1em 1em 1em;
       background-color: whitesmoke;
   }
 

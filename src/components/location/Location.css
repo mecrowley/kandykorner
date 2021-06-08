@@ -7,7 +7,7 @@
   .location {
       flex-basis: 28%;
       margin: 1em;
-      padding: 0 0.3em 1em 0.3em;
+      padding: 0 1em 1em 1em;
       border: 0.3em solid goldenrod;
       background-color: whitesmoke;
   }
