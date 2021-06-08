@@ -38,7 +38,6 @@ export const CustomerList = () => {
             <h2>Customers</h2>
             <div className="customers">
                 {customerCandyPurchases.map(c => {
-                    // const customerOrders = customerCandys.filter(order => c.id === order.customerId)
                     return (
                         <div className="customer">
                             <h3 className="customer__name">{c.name}</h3>
