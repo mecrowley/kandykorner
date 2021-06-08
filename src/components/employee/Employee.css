@@ -1,24 +1,38 @@
 .employees {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .employee {
+  display: flex;
   flex-basis: 28%;
   margin: 1em;
-  padding: 1em;
+  padding: 0 0.3em 1em 0.3em;
   border: 0.3em solid goldenrod;
   background-color: whitesmoke;
+}
+
+.employee__name {
+    text-align: center;
+}
+
+.employee__interior {
+  margin: 0 auto;
 }
 
 .employee__info {
   margin-bottom: 1em;
 }
 
-.newEmployee__button {
+.fireEmployee {
     display: block;
     margin: auto;
+}
+
+.newEmployee__button {
+  display: block;
+  margin: auto;
 }
 
 .employeeForm {
@@ -38,5 +52,5 @@
 }
 
 fieldset {
-    border: 0;
+  border: 0;
 }

@@ -1,13 +1,26 @@
 .locations {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
   }
   
   .location {
       flex-basis: 28%;
       margin: 1em;
-      padding: 1em;
+      padding: 0 0.3em 1em 0.3em;
       border: 0.3em solid goldenrod;
       background-color: whitesmoke;
+  }
+
+  .location__interior {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .location__address {
+      text-align: center;
+  }
+
+  .location__info {
+      margin: auto;
   }

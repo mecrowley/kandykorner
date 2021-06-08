@@ -1,7 +1,7 @@
 .products {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .product {
@@ -15,4 +15,11 @@
 
 .product__info {
   margin-bottom: 1em;
+}
+
+.productSearch {
+  background-color: whitesmoke;
+  /* display: inline-block; */
+  padding: 1em;
+  margin: 0;
 }

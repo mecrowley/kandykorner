@@ -1,26 +1,33 @@
-import React, { useContext, useEffect } from "react"
+import React, { useContext, useEffect, useState } from "react"
 import { ProductContext } from "./ProductProvider"
 import { CustomerCandyContext } from "../customerCandy/CustomerCandyProvider";
 import "./Product.css"
 
 export const ProductList = () => {
 
-  const { products, getProducts } = useContext(ProductContext)
+  const { products, getProducts, searchTerms } = useContext(ProductContext)
   const { addCustomerCandy } = useContext(CustomerCandyContext)
+  const [ filteredProducts, setFiltered] = useState([])
 
   useEffect(() => {
-    console.log("ProductList: useEffect - getProducts")
     getProducts()
   }, [])
 
+  useEffect(() => {
+    if (searchTerms !== "") {
+      const subset = products.filter(product => product.name.toLowerCase().includes(searchTerms))
+      setFiltered(subset)
+    } else {
+      setFiltered(products)
+    }
+  }, [searchTerms, products])
 
   return (
     <>
-      <h2>Products</h2>
+      <h2 className="products__h2">Products</h2>
       <section className="products">
-        {console.log("ProductList: Render", products)}
         {
-          products.map(product => {
+          filteredProducts.map(product => {
             return (
               <div className="product" id={`product--${product.id}`}>
                 <div className="product__name">

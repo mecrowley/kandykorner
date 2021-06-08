@@ -4,13 +4,16 @@
     flex-direction: column;
     justify-content: space-between;
     text-align: center;
+    background-color: rgba(245, 245, 245, 0.637);
+    border: 0.3em solid goldenrod;
+    width: 85%;
+    margin: auto;
   }
   
   .customer {
       flex-basis: 28%;
-      margin: 1em;
+      /* margin: 1em; */
       padding: 1em;
-      border: 0.3em solid goldenrod;
       background-color: whitesmoke;
   }
 

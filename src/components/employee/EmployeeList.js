@@ -26,6 +26,7 @@ export const EmployeeList = () => {
           employees.map(employee => {
             return (
               <div className="employee" id={`employee--${employee.id}`}>
+                <div className="employee__interior">
                 <div className="employee__name">
                   <h3>{employee.name}</h3>
                 </div>
@@ -43,10 +44,11 @@ export const EmployeeList = () => {
                   Hourly Pay Rate: {employee.hourlyRate}
                 </div>
                 </div>
-                <button onClick={() => {
+                <button className="fireEmployee" onClick={() => {
                   deleteEmployee(employee.id)
                   history.push("/employees")
                 }}>Fire Employee 😿</button>
+              </div>
               </div>
             )
           })
