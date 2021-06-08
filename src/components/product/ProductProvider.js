@@ -7,13 +7,13 @@ export const ProductProvider = (props) => {
     const [ searchTerms, setSearchTerms ] = useState("")
 
     const getProducts = () => {
-        return fetch("http://localhost:8088/products?_expand=productType")
+        return fetch("https://kandy-api-mec.herokuapp.com/products?_expand=productType")
         .then(res => res.json())
         .then(setProducts)
     }
 
     const addProduct = ProductObj => {
-        return fetch("http://localhost:8088/products", {
+        return fetch("https://kandy-api-mec.herokuapp.com/products", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"

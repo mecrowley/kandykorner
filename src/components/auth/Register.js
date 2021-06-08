@@ -10,7 +10,7 @@ export const Register = (props) => {
     const history = useHistory()
 
     const existingUserCheck = () => {
-        return fetch(`http://localhost:8088/customers?email=${email.current.value}`)
+        return fetch(`https://kandy-api-mec.herokuapp.com/customers?email=${email.current.value}`)
             .then(res => res.json())
             .then(user => !!user.length)
     }
@@ -22,7 +22,7 @@ export const Register = (props) => {
         existingUserCheck()
             .then((userExists) => {
                 if (!userExists) {
-                    fetch("http://localhost:8088/customers", {
+                    fetch("https://kandy-api-mec.herokuapp.com/", {
                         method: "POST",
                         headers: {
                             "Content-Type": "application/json"
